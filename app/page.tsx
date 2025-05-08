@@ -29,8 +29,8 @@ const CardSlider: React.FC = () => {
       image: "/images/m4.jfif",
     },
     {
-      title: "Moose's Events",
-      description: "Moose hosts fun and unpredictable abstract streams, packed with giveaways for his watchers and followers. Whether you’re here to vibe, win, or learn, there’s always something exciting happening in the Moose community.",
+      title: "Moose\'s Events",
+      description: "Moose hosts fun and unpredictable abstract streams, packed with giveaways for his watchers and followers. Whether you\'re here to vibe, win, or learn, there\'s always something exciting happening in the Moose community.",
       image: "/images/m3.jfif",
     },
   ];
@@ -120,12 +120,12 @@ const NFTQuests: React.FC = () => {
     },
     {
       title: "Be a reply guy",
-      description: "Show up, engage, and support Moose on X. He rewards true believers who stick with him & it’s all about backing a legend and being part of the journey.",
+      description: "Show up, engage, and support Moose on X. He rewards true believers who stick with him & it\'s all about backing a legend and being part of the journey.",
       image: "/images/m5.jfif",
     },
     {
       title: "Be Real",
-      description: "Don’t just show up for the giveaways but stay for the growth. Connect with Moose and the community, share the wins, and build something bigger together.",
+      description: "Don\'t just show up for the giveaways but stay for the growth. Connect with Moose and the community, share the wins, and build something bigger together.",
       image: "/images/m6.jfif",
     },
   ];
@@ -136,7 +136,7 @@ const NFTQuests: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <a href="#nft-quests">
           <h2 className="text-2xl md:text-4xl gaming-font text-green-400 text-center mb-6 md:mb-8 drop-shadow-[0_0_10px_rgba(0,255,0,0.6)] hover:text-green-300 transition-colors">
-            Quest
+            Mooose's Community Quest
           </h2>
         </a>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
