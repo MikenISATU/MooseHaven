@@ -136,7 +136,7 @@ const NFTQuests: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <a href="#nft-quests">
           <h2 className="text-2xl md:text-4xl gaming-font text-green-400 text-center mb-6 md:mb-8 drop-shadow-[0_0_10px_rgba(0,255,0,0.6)] hover:text-green-300 transition-colors">
-            Mooose\'s Community Quest
+            Mooose's CommunityQuest
           </h2>
         </a>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -154,7 +154,8 @@ const NFTQuests: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
               </div>
-              <h3 className="text-base md:text-xl gaming-font text-green-400 mb-2 drop-shadow-[0_0_5px_rgba(0,255,0,0.4)]">
+              <h3 className="text-base md:text-xl gaming-font '
+              '-green-400 mb-2 drop-shadow-[0_0_5px_rgba(0,255,0,0.4)]">
                 {nft.title}
               </h3>
               <p className="text-gray-200 text-xs md:text-base">{nft.description}</p>
@@ -263,11 +264,11 @@ const Home: NextPage = () => {
         <div className="container mx-auto px-4">
           <a href="#story">
             <h2 className="text-2xl md:text-4xl gaming-font text-green-400 text-center mb-6 md:mb-8 drop-shadow-[0_0_10px_rgba(0,255,0,0.6)] hover:text-green-300 transition-colors">
-              The Moose\'s Journey
+              The Moose Journey
             </h2>
           </a>
           <p className="text-gray-200 text-sm md:text-lg max-w-3xl mx-auto text-center">
-            @JoeyMooose\'s on X is a real builder, doing big giveaways, and loyal to his community. A diamond handed Pudgy Penguin NFT holder for years and $PENGU enthusiast, with 46K+ followers shares humor, hustle, and heart, and a LEGEND.
+            @JoeyMooose on X is a real builder, doing big giveaways, and loyal to his community. A diamond handed Pudgy Penguin NFT holder for years and $PENGU enthusiast, with 46K+ followers shares humor, hustle, and heart, and a LEGEND.
           </p>
         </div>
       </section>
@@ -277,7 +278,7 @@ const Home: NextPage = () => {
         <div className="container mx-auto px-4">
           <a href="#adventures">
             <h2 className="text-2xl md:text-4xl gaming-font text-green-400 text-center mb-6 md:mb-8 drop-shadow-[0_0_10px_rgba(0,255,0,0.6)] hover:text-green-300 transition-colors">
-              Moose\'s Adventures
+              Moose Adventures
             </h2>
           </a>
           <CardSlider />
@@ -351,7 +352,7 @@ const Home: NextPage = () => {
             </a>
             <a
               href="https://t.me/Moose_Knows"
-              className="text-gray-200 hover:text-green-400 gaming-font flex items-center justify-center space-x-2 transition-colors hover:drop-shadow-[0_0-5px_rgba(0,255,0,0.4)] text-xs md:text-base"
+              className="text-gray-200 hover:text-green-400 gaming-font flex items-center justify-center space-x-2 transition-colors hover:drop-shadow-[0_0_5px_rgba(0,255,0,0.4)] text-xs md:text-base"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
