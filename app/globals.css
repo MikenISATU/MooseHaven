@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.gaming-font {
+  font-family: 'Press Start 2P', cursive;
+}
 
 :root {
   --background: #ffffff;
