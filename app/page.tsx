@@ -136,7 +136,7 @@ const NFTQuests: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <a href="#nft-quests">
           <h2 className="text-2xl md:text-4xl gaming-font text-green-400 text-center mb-6 md:mb-8 drop-shadow-[0_0_10px_rgba(0,255,0,0.6)] hover:text-green-300 transition-colors">
-            Mooose's CommunityQuest
+            Moose Community Quest
           </h2>
         </a>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
