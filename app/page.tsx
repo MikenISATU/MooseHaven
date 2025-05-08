@@ -37,6 +37,8 @@ const CardSlider: React.FC = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
@@ -46,22 +48,60 @@ const CardSlider: React.FC = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const diffX = touchStartX.current - touchEndX.current;
+      if (diffX > 50) {
+        nextSlide();
+      } else if (diffX < -50) {
+        prevSlide();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   useEffect(() => {
     if (sliderRef.current) {
       const cardWidth = sliderRef.current.children[0].clientWidth;
-      const offset = (sliderRef.current.clientWidth - cardWidth) / 2 - currentIndex * cardWidth;
+      const totalWidth = sliderRef.current.scrollWidth;
+      const containerWidth = sliderRef.current.clientWidth;
+      const maxOffset = Math.max(0, totalWidth - containerWidth);
+      let offset = -currentIndex * cardWidth + (containerWidth - cardWidth) / 2;
+
+      // Ensure the last card is centered
+      if (currentIndex === cards.length - 1) {
+        offset = -maxOffset + (containerWidth - cardWidth) / 2;
+      } else if (currentIndex === 0) {
+        offset = (containerWidth - cardWidth) / 2;
+      }
+
       sliderRef.current.style.transform = `translateX(${offset}px)`;
       sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
     }
-  }, [currentIndex]);
+  }, [currentIndex, cards.length]);
 
   return (
     <div className="relative w-full max-w-5xl mx-auto overflow-hidden px-4 touch-pan-y">
-      <div ref={sliderRef} className="flex">
+      <div
+        ref={sliderRef}
+        className="flex"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`flex-shrink-0 w-full md:w-2/3 flex flex-col md:flex-row items-center bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl border border-green-500/50 p-4 mx-2 transition-all duration-300 ${
+            className={`flex-shrink-0 w-full sm:w-4/5 md:w-2/3 flex flex-col md:flex-row items-center bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl border border-green-500/50 p-4 mx-2 transition-all duration-300 ${
               index === currentIndex ? 'scale-100 opacity-100' : 'scale-90 opacity-60'
             } hover:scale-102`}
           >
@@ -154,8 +194,7 @@ const NFTQuests: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
               </div>
-              <h3 className="text-base md:text-xl gaming-font '
-              '-green-400 mb-2 drop-shadow-[0_0_5px_rgba(0,255,0,0.4)]">
+              <h3 className="text-base md:text-xl gaming-font text-green-400 mb-2 drop-shadow-[0_0_5px_rgba(0,255,0,0.4)]">
                 {nft.title}
               </h3>
               <p className="text-gray-200 text-xs md:text-base">{nft.description}</p>
@@ -322,7 +361,7 @@ const Home: NextPage = () => {
       <footer className="bg-gray-900 text-gray-200 py-6 md:py-8 mt-auto border-t border-green-500/20">
         <div className="container mx-auto px-4 text-center">
           <p className="text-xs md:text-base gaming-font mb-3 md:mb-4">© 2025 Moose Haven. All rights reserved.</p>
-          <div className="flex flex-col md:flex-row justify-center space-y-3 md:space-y-0 md:space-x-6">
+          <div className="flex flex-row justify-center space-x-6 flex-wrap">
             <a
               href="https://x.com/JoeyMooose"
               className="text-gray-200 hover:text-green-400 gaming-font flex items-center justify-center space-x-2 transition-colors hover:drop-shadow-[0_0_5px_rgba(0,255,0,0.4)] text-xs md:text-base"
