@@ -21,17 +21,17 @@ const CardSlider: React.FC = () => {
     {
       title: "Who He Is?",
       description: "A true Web3 builder and entertainer & known for humor, hustle, and diamond hands, leading the charge in crypto.",
-      image: "/images/m1.jfif",
+      image: "/images/m1.png",
     },
     {
       title: "What He Wants to Achieve?",
       description: "Moose aims to be the Mr.Beast of Web3, giving back and helping his community grow.",
-      image: "/images/m4.jfif",
+      image: "/images/m4.png",
     },
     {
       title: "Moose\'s Events",
       description: "Moose hosts fun and unpredictable abstract streams, packed with giveaways for his watchers and followers. Whether you\'re here to vibe, win, or learn, there\'s always something exciting happening in the Moose community.",
-      image: "/images/m3.jfif",
+      image: "/images/m3.png",
     },
   ];
 
@@ -116,17 +116,17 @@ const NFTQuests: React.FC = () => {
     {
       title: "Subscribe to Moose for only $1 monthly",
       description: "Get access to subscriber giveaways every month and unlock exclusive perks. Your support helps keep the community strong & and you get rewarded for it.",
-      image: "/images/m2.jfif",
+      image: "/images/m2.png",
     },
     {
       title: "Be a reply guy",
       description: "Show up, engage, and support Moose on X. He rewards true believers who stick with him & it\'s all about backing a legend and being part of the journey.",
-      image: "/images/m5.jfif",
+      image: "/images/m5.png",
     },
     {
       title: "Be Real",
       description: "Don\'t just show up for the giveaways but stay for the growth. Connect with Moose and the community, share the wins, and build something bigger together.",
-      image: "/images/m6.jfif",
+      image: "/images/m6.png",
     },
   ];
 
@@ -298,9 +298,9 @@ const Home: NextPage = () => {
           </a>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {[
-              { name: 'Moose in Forest', src: '/images/m8.jfif' },
-              { name: 'Moose by Lake', src: '/images/m9.jfif' },
-              { name: 'Moose at Dusk', src: '/images/m10.jfif' },
+              { name: 'Moose in Forest', src: '/images/m8.png' },
+              { name: 'Moose by Lake', src: '/images/m9.png' },
+              { name: 'Moose at Dusk', src: '/images/m10.png' },
             ].map((image, index) => (
               <div
                 key={index}
