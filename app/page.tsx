@@ -174,7 +174,7 @@ const Home: NextPage = () => {
     <div className="flex flex-col min-h-screen bg-black font-sans">
       <Head>
         <title>Moose Haven</title>
-        <meta name="description" content="Discover Thunderhoof, the legendary moose of Moose Haven." />
+        <meta name="description" content="Discover Moose, the legendary moose of Moose Haven." />
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
@@ -285,7 +285,6 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      {/* Thunderhoof's NFT Quests Section */}
       <NFTQuests />
 
       {/* Gallery Section */}
@@ -335,7 +334,7 @@ const Home: NextPage = () => {
               >
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
-              <span>Thunderhoof on X</span>
+              <span>Moose on X</span>
             </a>
             <a
               href="https://portal.abs.xyz/stream/Moose"
@@ -361,7 +360,7 @@ const Home: NextPage = () => {
               >
                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.02.21-.04.316-.046a.966.966 0 0 1 .943.723c.01.05.057.086.12.116.173.083.348.18.52.288l-.108.024a11.86 11.86 0 0 1-8.684 4.303 11.917 11.917 0 0 1-6.652-1.836c.196.549.412 1.03.673 1.495.16.286.336.572.45.808.15.318.382.636.566.86.276.335.63.572.928.838l-.005.013a.37.37 0 0 0 .11.038c.051.008.087.008.132.008a.614.614 0 0 0 .57-.4c.086-.246.217-.494.35-.74a9.72 9.72 0 0 0 2.5-5.998 12.5 12.5 0 0 1-1.848-.228l-2.3-.502a.5.5 0 0 0-.4.046.999.999 0 0 0-.27.668c-.01.042-.013.083-.013.126a3 3 0 0 0 .803 2.03 2.96 2.96 0 0 0 2.04.912c.504.024 1.003-.05 1.48-.213a4.944 4.944 0 0 0 1.733-1.001c.38-.344.723-.74 1.045-1.13a5.944 5.944 0 0 0 .668-1.925c.04-.28.04-.543.024-.805a1.52 1.52 0 0 0-.402-.907 1.566 1.566 0 0 0-.928-.513z" />
               </svg>
-              <span>Moose Haven Telegram</span>
+              <span>Moose Telegram</span>
             </a>
           </div>
         </div>
